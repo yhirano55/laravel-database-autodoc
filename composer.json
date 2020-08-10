@@ -1,0 +1,34 @@
+{
+    "name": "yhirano55/laravel-database-autodoc",
+    "description": "Generate the database document automatically after migrate command.",
+    "keywords": ["laravel", "database", "documentation"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yoshiyuki Hirano",
+            "email": "yhirano@me.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "laravel/framework": ">=5.7"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laravel\\DatabaseAutodoc\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laravel\\DatabaseAutodoc\\Providers\\CommandServiceProvider",
+                "Laravel\\DatabaseAutodoc\\Providers\\EventServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
