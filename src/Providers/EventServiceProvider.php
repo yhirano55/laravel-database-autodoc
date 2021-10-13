@@ -15,7 +15,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         CommandFinished::class => [
-           CommandFinishListener::class
+            CommandFinishListener::class
         ],
     ];
 

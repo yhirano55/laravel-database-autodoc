@@ -84,7 +84,7 @@ class GenerateDocumentCommand extends Command
         $tables = '';
 
         $databaseName = env('DB_DATABASE');
- 
+
         $query = 'SELECT table_name as name, table_comment as description FROM information_schema.tables WHERE table_schema = "' . $databaseName . '"';
 
         collect(DB::select($query))->each(function ($t) use (&$tables) {

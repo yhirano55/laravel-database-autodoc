@@ -1,12 +1,12 @@
 {
-    "name": "yhirano55/laravel-database-autodoc",
+    "name": "joaopalopes24/laravel-database-autodoc",
     "description": "Generate the database document automatically after migrate command.",
     "keywords": ["laravel", "database", "documentation"],
     "license": "MIT",
     "authors": [
         {
-            "name": "Yoshiyuki Hirano",
-            "email": "yhirano@me.com"
+            "name": "João Pedro Lopes",
+            "email": "joaopalopes24@gmail.com"
         }
     ],
     "require": {
