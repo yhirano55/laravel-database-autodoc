@@ -82,12 +82,11 @@ class GenerateDocumentCommand extends Command
     private function getTables(): string
     {
         $tables = '';
+
         $databaseName = env('DB_DATABASE');
-        $query = <<<SQL
-SELECT table_name as name, table_comment as description
-FROM information_schema.tables
-WHERE table_schema = "{$databaseName}"
-SQL;
+ 
+        $query = 'SELECT table_name as name, table_comment as description FROM information_schema.tables WHERE table_schema = "' . $databaseName . '"';
+
         collect(DB::select($query))->each(function ($t) use (&$tables) {
             $columns = collect(DB::select("SHOW FULL COLUMNS FROM {$t->name}"));
 
